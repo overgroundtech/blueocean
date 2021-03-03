@@ -7,7 +7,7 @@ function Navbar(){
         <>
 <nav className="navbar navbar-expand-lg navbar-light bg-primary">
   <div className="container-fluid">
-   <Link to = "/" > <h2 style={{color: "black"}}> Blue Ocean </h2> </Link>
+   <Link to = "/" > <h2 style={{color: "black"}}> <img src="images/logo.jpg" className="img-fluid" alt="logo"/> </h2> </Link>
     <div id="navbarNav">
       <ul className="navbar-nav">
         <li className="nav-item">

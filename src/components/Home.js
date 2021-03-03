@@ -1,10 +1,12 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+
+
 export default function Home(){
     
     return (
         <>
-        <div>
+        <div className="fill" style={{backgroundImage: "url('images/back.jpeg')" }}>
         <br/>
         <br/>
             <br/>
@@ -29,7 +31,21 @@ export default function Home(){
                             To Kitchen
                         </button></Link>
                     </div>
-
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
+                    <br/>
                 </div>
             </div>
         </div>

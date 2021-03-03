@@ -4,6 +4,7 @@ import Food from './Food.js'
 export default function Reception({menu, tables, getOrder}){
 
     const[order, setOrder] = useState([])
+    const[total, setTotal] = useState(0)
 
     const addOrder = (name, price, quantity, table) => {
         const newPrice = quantity * price
@@ -22,6 +23,13 @@ export default function Reception({menu, tables, getOrder}){
         setOrder([])
     }
 
+    const findTotal = () => {
+        let sum = 0;
+        order.forEach(item => {
+            sum = sum + item.price
+        })
+        setTotal(sum)
+    }
 
     return (
         <>
@@ -59,6 +67,10 @@ export default function Reception({menu, tables, getOrder}){
                                     </div>
                                 ) )
                             }
+                            <div>
+                                <p> <button className="btn btn-sm sm btn-info" onClick={()=> findTotal()} >Total</button> ....................... : {total}</p>
+                                <hr />
+                            </div>
                             <button className="btn btn-success btn-sm rounded-pill" onClick={()=>orderSetter()}>Send Order</button>
                         </div>
                     </div>

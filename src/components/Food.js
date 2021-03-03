@@ -21,7 +21,10 @@ export default function Food({category, addOrder, tables}){
                                         <>{food.name}    ............................................   ksh-{food.price}
                                         
                                         <div style={{paddingBottom: '5px', marginBottom: '5px', margin: 'start'}}>
-                                             quantity:  <input className="sm rounded" type="number" onChange={(e)=> setQuantity(e.target.value)}/>
+                                             quantity:  <input className="sm rounded" type="number" onChange={(e)=>{
+                                                  setQuantity(e.target.value)
+                                                  
+                                             }}/>
                                         </div> 
                                         
                                         <div style={{paddingBottom: '5px', marginBottom: '5px', margin: 'start'}}>
@@ -37,6 +40,7 @@ export default function Food({category, addOrder, tables}){
                                         <button style={{paddingBottom: '5px', marginBottom: '5px'}} className="btn float-right btn-success btn-sm rounded-pill" onClick={() => {
                                             addOrder(food.name, food.price, quantity, table)
                                             setQuantity(1)
+                                            setTable(1)
                                         }}>add to Order </button>  </>
                                     </div>
 
