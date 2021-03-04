@@ -19,13 +19,23 @@
     "wait-on": "^5.2.1",
     "web-vitals": "^0.2.4"
   },
+
+"description": "blueocean app",
+"author": "overgroundtech: kimita",
+"build": {
+"appId": "com.blueocean"
+},
+"homepage": "./",
   "main": "main.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-react": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron  .\" "
+    "electron-build": "electron-builder",
+    "release": "yarn react-build && electron-builder --publish=always",
+    "build": "yarn react-build && yarn electron-build",
+    "start": "concurrently \"yarn react-start\" \"wait-on http://localhost:3000 && electron  .\" "
   },
   "eslintConfig": {
     "extends": [
